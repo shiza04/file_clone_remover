@@ -12,8 +12,7 @@ for el in dirs:
             data = open(file, "rb").read()
             print(hash(data))
             if hash(data) in saved_elements:
-                print(f"{el} already exists")
-                #os.system(f"del \"{file}\"")
+                os.system(f"del \"{file}\"")
             else:
                 saved_elements[hash(data)] = file
     print(el, saved_elements)
